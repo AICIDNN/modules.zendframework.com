@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Modules.zendframework.com by AICIDNN</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/AICIDNN/modules.zendframework.com">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/AICIDNN/modules.zendframework.com/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/AICIDNN/modules.zendframework.com/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Modules.zendframework.com</h1>
+          <p>Home for ZF2 module distribution</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/AICIDNN">AICIDNN</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="zf2-modules-site" class="anchor" href="#zf2-modules-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>ZF2 Modules Site</h1>
+
+<p><a href="https://travis-ci.org/zendframework/modules.zendframework.com"><img src="https://travis-ci.org/zendframework/modules.zendframework.com.svg?branch=master" alt="Build Status"></a> 
+<a href="https://scrutinizer-ci.com/g/zendframework/modules.zendframework.com/?branch=master"><img src="https://scrutinizer-ci.com/g/zendframework/modules.zendframework.com/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+<a href="https://scrutinizer-ci.com/g/zendframework/modules.zendframework.com/build-status/master"><img src="https://scrutinizer-ci.com/g/zendframework/modules.zendframework.com/badges/build.png?b=master" alt="Build Status"></a>
+<a href="https://www.versioneye.com/user/projects/54885d5a746eb514b0000279"><img src="https://www.versioneye.com/user/projects/54885d5a746eb514b0000279/badge.svg?style=flat" alt="Dependency Status"></a> </p>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>This site will eventually be a community site for publishing and sharing Zend Framework modules.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a id="main-setup" class="anchor" href="#main-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Setup</h3>
+
+<ul>
+<li>Clone this project <code>git clone git://github.com/zendframework/modules.zendframework.com.git</code>
+</li>
+<li>Run <code>composer install</code> to initialize your vendors</li>
+<li>Import <code>data/0.sql</code> into your database</li>
+<li>
+<a href="https://github.com/settings/applications/new">Create a new application in GitHub</a>
+
+<ul>
+<li>Main URL and CALLBACK url must be the same without any routing. e.g. <a href="http://modules.zendframework.com">http://modules.zendframework.com</a>
+</li>
+</ul>
+</li>
+<li>Copy <code>config/autoload/github.local.php.dist</code> to <code>config/autoload/github.local.php</code> and enter the Id and Secret provided during the application registration on GitHub</li>
+<li>Copy <code>config/autoload/database.local.php.dist</code> to <code>config/autoload/database.local.php</code> and enter your database credentials here</li>
+<li>Copy <code>config/autoload/cache.local.php.dist</code> to <code>config/autoload/cache.local.php</code>. It's optional</li>
+</ul>
+
+<h3>
+<a id="vagrant-setup" class="anchor" href="#vagrant-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vagrant Setup</h3>
+
+<ul>
+<li>Clone this project: <code>git clone git://github.com/zendframework/modules.zendframework.com.git</code>
+</li>
+<li><a href="https://github.com/settings/applications/new">Create a new application in GitHub</a></li>
+<li>Main URL and CALLBACK url must be the same without any routing. e.g. <a href="http://modules.zendframework.com">http://modules.zendframework.com</a>
+</li>
+<li>Remove the <code>.dist</code> suffix from the files in <code>config/autoload</code> and edit them according to your own credentials
+
+<ul>
+<li>The database information for vagrant is:</li>
+<li>Username: <code>modules</code>
+</li>
+<li>Database name: <code>modules</code>
+</li>
+<li>Password: <code>modules</code>
+</li>
+</ul>
+</li>
+<li>Run <code>vagrant up</code> (You will need <a href="http://www.vagrantup.com/">Vagrant</a>)</li>
+<li>Add an entry in your hosts (<code>/etc/hosts</code> or <code>C:\Windows\system32\drivers\etc\hosts</code>):
+
+<ul>
+<li><code>192.168.56.101 modules.zendframework.dev</code></li>
+</ul>
+</li>
+<li>Browse to <a href="http://modules.zendframework.dev/">http://modules.zendframework.dev/</a>
+</li>
+</ul>
+
+<h3>
+<a id="development-mode" class="anchor" href="#development-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development Mode</h3>
+
+<p>To enable development mode:</p>
+
+<ul>
+<li>Toggle the development mode flag: <code>php public/index.php development enable</code>
+</li>
+<li>Copy <code>config/autoload/development.local.php.dist</code> to <code>config/autoload/development.local.php</code>
+</li>
+<li>Copy <code>vendor/zendframework/zend-developer-tools/config/zenddevelopertools.local.php.dist</code> to <code>config/autoload/zenddevelopertools.local.php</code>
+</li>
+</ul>
+
+<h2>
+<a id="deployment" class="anchor" href="#deployment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deployment</h2>
+
+<p>The master branch of this repository is manually deployed live to <a href="http://modules.zendframework.com/">modules.zendframework.com</a> by <a href="https://github.com/GeeH">@GeeH</a>.</p>
+
+<p><img class="emoji" title=":bulb:" alt=":bulb:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a1.png" height="20" width="20" align="absmiddle"> After deployment, a tag is created, so the latest of the <a href="https://github.com/zendframework/modules.zendframework.com/releases">releases</a>
+represents what is deployed to production.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
